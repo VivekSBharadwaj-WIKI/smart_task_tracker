@@ -1,13 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Task Tracker</title>
-    <link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8" />
+  <title>Smart Task Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
-    <script src="./script.js"></script>
+
+<div class="app">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">panze</div>
+
+    <nav class="menu">
+      <button class="menu-item active">🏠</button>
+      <button class="menu-item">📋</button>
+      <button class="menu-item">📊</button>
+      <button class="menu-item">⚙️</button>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <h1>Project Dashboard</h1>
+
+      <div class="tabs">
+        <button>Today</button>
+        <button>This Week</button>
+        <button class="active">This Month</button>
+        <button>Reports</button>
+      </div>
+
+      <input type="text" placeholder="Search tasks..." />
+    </header>
+
+    <!-- Dashboard Grid -->
+    <section class="dashboard">
+
+      <!-- My Tasks -->
+      <div class="card tasks">
+        <div class="card-header">
+          <h3>My Tasks</h3>
+          <button>+</button>
+        </div>
+
+        <div class="task-list">
+          <div class="task">
+            <h4>Website Design</h4>
+            <p>Design a modern UI</p>
+          </div>
+
+          <div class="task">
+            <h4>Upload Files</h4>
+            <p>Push to GitHub</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects Overview -->
+      <div class="card chart">
+        <h3>Projects Overview</h3>
+        <canvas id="projectChart"></canvas>
+      </div>
+
+      <!-- Income vs Expense -->
+      <div class="card chart">
+        <h3>Income vs Expense</h3>
+        <canvas id="incomeChart"></canvas>
+      </div>
+
+      <!-- Invoice -->
+      <div class="card invoice">
+        <h3>Invoice Overview</h3>
+        <p>Overdue: 5</p>
+      </div>
+
+    </section>
+
+  </main>
+</div>
+
+<script src="app.js"></script>
 </body>
 </html>
