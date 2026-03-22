@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Smart Task Dashboard</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -11,79 +11,71 @@
 
   <!-- Sidebar -->
   <aside class="sidebar">
-    <div class="logo">panze</div>
-
-    <nav class="menu">
-      <button class="menu-item active">🏠</button>
-      <button class="menu-item">📋</button>
-      <button class="menu-item">📊</button>
-      <button class="menu-item">⚙️</button>
+    <h2 class="logo">panze</h2>
+    <nav>
+      <button class="active">🏠</button>
+      <button>📋</button>
+      <button>📊</button>
+      <button>⚙️</button>
     </nav>
   </aside>
 
-  <!-- Main Content -->
+  <!-- Main -->
   <main class="main">
 
     <!-- Topbar -->
     <header class="topbar">
-      <h1>Project Dashboard</h1>
-
-      <div class="tabs">
-        <button>Today</button>
-        <button>This Week</button>
-        <button class="active">This Month</button>
-        <button>Reports</button>
+      <div>
+        <p class="subtitle">Manage and track your projects</p>
+        <h1>Project Dashboard</h1>
       </div>
 
-      <input type="text" placeholder="Search tasks..." />
+      <div class="top-actions">
+        <div class="tabs">
+          <button>Today</button>
+          <button>This Week</button>
+          <button class="active">This Month</button>
+        </div>
+
+        <input id="search" placeholder="Search tasks..." />
+      </div>
     </header>
 
-    <!-- Dashboard Grid -->
+    <!-- Dashboard -->
     <section class="dashboard">
 
-      <!-- My Tasks -->
-      <div class="card tasks">
+      <!-- Tasks -->
+      <section class="card tasks">
         <div class="card-header">
           <h3>My Tasks</h3>
-          <button>+</button>
+          <button id="addTask">+</button>
         </div>
 
-        <div class="task-list">
-          <div class="task">
-            <h4>Website Design</h4>
-            <p>Design a modern UI</p>
-          </div>
+        <div id="taskList"></div>
+      </section>
 
-          <div class="task">
-            <h4>Upload Files</h4>
-            <p>Push to GitHub</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Projects Overview -->
-      <div class="card chart">
+      <!-- Charts -->
+      <section class="card">
         <h3>Projects Overview</h3>
         <canvas id="projectChart"></canvas>
-      </div>
+      </section>
 
-      <!-- Income vs Expense -->
-      <div class="card chart">
+      <section class="card">
         <h3>Income vs Expense</h3>
         <canvas id="incomeChart"></canvas>
-      </div>
+      </section>
 
       <!-- Invoice -->
-      <div class="card invoice">
+      <section class="card">
         <h3>Invoice Overview</h3>
-        <p>Overdue: 5</p>
-      </div>
+        <p id="invoiceData">No data</p>
+      </section>
 
     </section>
 
   </main>
 </div>
 
-<script src="app.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
